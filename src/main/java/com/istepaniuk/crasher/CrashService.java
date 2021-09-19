@@ -7,14 +7,12 @@ public class CrashService {
     private Integer counter = 20;
 
     public ArrayList<Todo> getAllTodos() {
-        counter--;
-        if (counter <= 0) {
-            throw new RuntimeException("It finally crashed");
+        if (Math.random() < 0.1) {
+            System.exit(666);
         }
 
         return new ArrayList<>(Arrays.asList(
-                new Todo("this_backend_will", "crash miserably"),
-                new Todo("requests_left", counter.toString())
+                new Todo("this_backend_will", "crash miserably")
         ));
     }
 }
