@@ -7,7 +7,7 @@ public class CrashService {
     private Integer counter = 20;
 
     public ArrayList<Todo> getAllTodos() {
-        if (Math.random() < 0.1) {
+        if (Math.random() < 0.03) {
             System.exit(666);
         }
 
